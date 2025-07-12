@@ -1,0 +1,29 @@
+{
+  "name": "thinkingboard",
+  "version": "1.0.0",
+  "description": "thinkingboard",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hellobisrat/thinkingboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hellobisrat/thinkingboard/issues"
+  },
+  "homepage": "https://github.com/Hellobisrat/thinkingboard#readme",
+  "dependencies": {
+    "@upstash/ratelimit": "^2.0.5",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.3",
+    "nodemon": "^3.1.10"
+  }
+}
