@@ -2,10 +2,11 @@ import express from "express";
 import cors from "cors";
 import noteRoutes from './routes/notesRoutes.js'
 import  connectDB  from "./config/db.js";
-import dotenv from "dotenv";
-
-
+import dotenv from 'dotenv';
 dotenv.config();
+
+
+console.log(process.env.PORT)
 
 // if (process.env.NODE_ENV !== "production") {
 //   app.use(
@@ -16,7 +17,7 @@ dotenv.config();
 // }
 
 const app = express();
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 app.use(cors());
@@ -40,7 +41,7 @@ if (process.env.NODE_ENV === "production") {
 
 const startServer = async () => {
  await connectDB();
-  app.listen(5000, () => console.log(`Server is running...http://localhost:${PORT || 5000}`));
+  app.listen(PORT, () => console.log(`Server is running...http://localhost:${PORT || 5000}`));
 };
 startServer();
 
